@@ -1,31 +1,26 @@
-kabuto-automation-hub/
-├── .editorconfig              # Editor config
-├── .env.example               # Env template
-├── .github/
-│   ├── ISSUE_TEMPLATE/        # Bug report template
-│   └── workflows/ci.yml       # GitHub Actions CI
-├── .gitignore                 # Git ignore rules
-├── .pre-commit-config.yaml    # Pre-commit hooks
-├── CONTRIBUTING.md            # Contributing guide
-├── Dockerfile                 # Multi-stage build
-├── LICENSE                    # MIT License
-├── Makefile                   # Dev commands
-├── README.md                  # Project docs
-├── docker-compose.yml         # Docker compose
-├── pyproject.toml             # Python project config
-├── src/
-│   └── kabuto/
-│       ├── __init__.py
-│       ├── cli.py             # CLI entry point
-│       ├── config/
-│       │   ├── __init__.py
-│       │   └── settings.py    # Pydantic settings
-│       ├── core/
-│       │   ├── __init__.py
-│       │   └── engine.py      # Task engine
-│       └── utils/
-│           ├── __init__.py
-│           └── logger.py      # Structured logging
-└── tests/
-    └── unit/
-        └── test_engine.py     # Unit tests
+Features:
+- 🔗 Blockchain Ops — Multi-chain transaction automation
+- ⚡ Task Engine — Priority-based task queue with retry logic
+- 📊 Structured Logging — JSON logs with context propagation
+- 🐳 Docker Ready — Multi-stage builds for prod & dev
+- 🔒 Type Safe — Full mypy strict mode
+
+Quick Start:
+git clone https://github.com/llovren0/automation-hub.git
+cd automation-hub
+cp .env.example .env
+
+Docker:
+make dev
+kabuto run
+kabuto status
+make docker-build
+make docker-run
+
+
+Development:
+make dev        # Install dev deps + pre-commit
+make lint       # Run linter
+make format     # Format code
+make test       # Run tests
+make typecheck  # Type checking
